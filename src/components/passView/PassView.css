@@ -1,7 +1,11 @@
 .container-pass-view{
     height: auto;
     width: 30%;
-    background-color: #8A817C;
+    background-color: #036D19;
     padding: 25px;
     border-radius: 5px;
+}
+
+.container-pass-view Input{
+    color: white;
 }

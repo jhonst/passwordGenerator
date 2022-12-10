@@ -1,39 +1,24 @@
 .footer-jsa {
-
     padding: 15px;
-    /*
-    margin: 0px;
-    margin-top: auto;
-    width: 100%;
-    background-color: black;
-    /*
-    position: relative;
-    bottom: 0px;
-    
-    margin: 0px;
-    margin-top: auto;
-    position: fixed;
-    left: 0;
+
+    margin: 0px !important;
+    position: absolute;
     bottom: 0;
-*/
-margin: 0px;
-position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: auto;  
+    width: 100%;
+    height: auto;
 
     background-color: grey;
     color: white;
     text-align: center;
 }
 
-.container-icons-footerjsa{
+.container-icons-footerjsa {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.container-icons-footerjsa > *{
+.container-icons-footerjsa>* {
     margin: 5px;
     cursor: pointer;
 }

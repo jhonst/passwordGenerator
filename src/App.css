@@ -1,17 +1,11 @@
 /*body { min-height: 100vh; }*/
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
 
 body{
-  background-color: #463F3A !important;
-
-  /*
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  */
+  background-color: #0A2E36 !important;
 }
 
 .app-general{
-  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,4 +26,11 @@ body{
 /*Global styles*/
 .color-white{
   color: white;
+  font-family: 'Rajdhani', sans-serif !important;
 }
+
+.color-green{
+  color: #27FB6B;
+  font-family: 'Rajdhani', sans-serif !important;
+}
+

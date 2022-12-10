@@ -1,4 +1,3 @@
-
 import { OptionsConfig } from "../optionsConfig/OptionsConfig";
 import "./PassConfiguration.css"
 

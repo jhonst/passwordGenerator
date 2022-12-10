@@ -1,21 +1,14 @@
 .container-force{
     width: 100%;
     height: auto;
-
     padding: 10px;
-
     border-radius: 5px;
-
     margin-top: 15px;
     margin-bottom: 15px;
-
     background-color: #463F3A;
-
-    
     display: flex;
     align-items: center;
 }
-
 
 .color-blue-b{
     width: 100%;

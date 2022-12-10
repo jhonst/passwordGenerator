@@ -1,0 +1,23 @@
+.slider-container{
+    display: flex;
+    font-size: x-large;
+    margin-bottom: 15px;
+}
+
+.slider-container :first-child{
+    width: 30%;
+}
+
+.slider-option{
+    color: aqua !important;
+}
+
+.text-options p {
+    color: white;
+    font-family: 'Rajdhani', sans-serif !important;
+}
+
+.text-options {
+    color: white;
+    font-family: 'Rajdhani', sans-serif !important;
+}

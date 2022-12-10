@@ -1,8 +1,5 @@
 import './App.css';
 
-
-
-
 import { Heading } from '@chakra-ui/react'
 import { PassConfiguration } from './components/passConfiguration/PassConfiguration';
 import { PassView } from './components/passView/PassView';
@@ -13,15 +10,13 @@ function App() {
   return (
       <ContextPassword>
         <div className="app-general">
-          <Heading className='color-white'>Password Generator</Heading>
+          <Heading className='color-green'>Password Generator</Heading>
           <PassView/>
           <PassConfiguration/>
+          <br/><br/>
           <FooterJsa/>
         </div>
-        
       </ContextPassword>
-      
-    
   );
 }
 

@@ -3,38 +3,35 @@ import { useEffect, useState } from "react";
 import "./ForceViewer.css";
 
 interface configurations {
-    [idex : string] : number | boolean;
-    long : number;
-    letters : boolean;
-    capitalLetters : boolean;
-    numbers : boolean;
-    symbols : boolean;
+    [idex: string]: number | boolean;
+    long: number;
+    letters: boolean;
+    capitalLetters: boolean;
+    numbers: boolean;
+    symbols: boolean;
 }
 
-const ForceViewer = ({objStatusForce} : {objStatusForce:configurations}) => {
-
+const ForceViewer = ({ objStatusForce }: { objStatusForce: configurations }) => {
 
     const [currentLevel, setCurrentLevel] = useState(0);
 
-
-    useEffect(()=>{
+    useEffect(() => {
         calculateLevel(objStatusForce);
-    },[objStatusForce]);
+    }, [objStatusForce]);
 
-
-    function calculateLevel(objStatus : configurations):number{
+    function calculateLevel(objStatus: configurations): number {
         console.log(objStatus);
-        let level : number = 0;
-        for(let key in objStatus){
-            if(key === "long"){
-                if(objStatus.long >= 5){
+        let level: number = 0;
+        for (let key in objStatus) {
+            if (key === "long") {
+                if (objStatus.long >= 5) {
                     level++;
                 }
-                if(objStatus.long >= 10){
+                if (objStatus.long >= 10) {
                     level++;
                 }
-            }else{
-                if(objStatus[key] === true){
+            } else {
+                if (objStatus[key] === true) {
                     level++;
                 }
             }
@@ -42,29 +39,27 @@ const ForceViewer = ({objStatusForce} : {objStatusForce:configurations}) => {
         setCurrentLevel(level);
         return level;
     }
-    //6.11
-    function calculateColor(value:number):string{
-        if(value <= 2){
+
+    function calculateColor(value: number): string {
+        if (value <= 2) {
             return "red";
-        }else if(value <= 3){
+        } else if (value <= 3) {
             return "yellow";
-        }else{
+        } else {
             return "green";
         }
     }
 
-    return(
+    return (
         <div className="container-force">
             <div className="color-blue-b color-white">
                 Security level:
-
-                
             </div>
             <div className="color-blue-b">
-            <Progress colorScheme={calculateColor(currentLevel)} size='lg' value={currentLevel} max={6}/>
+                <Progress colorScheme={calculateColor(currentLevel)} size='lg' value={currentLevel} max={6} />
             </div>
         </div>
     );
 }
 
-export {ForceViewer};
+export { ForceViewer };

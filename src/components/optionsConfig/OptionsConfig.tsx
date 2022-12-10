@@ -20,17 +20,15 @@ const OptionsConfig = () => {
     const symbolsList: string = "!#$%&/()=?¡-_.,";
 
     const configInit: configurations = {
-        long: 16, 
-        capitalLetters: true, 
-        letters: true, 
-        numbers: true, 
+        long: 16,
+        capitalLetters: true,
+        letters: true,
+        numbers: true,
         symbols: true
     }
 
-
     const { setPass } = usePassContext();
     const [config, setConfig] = useState<configurations>(configInit);
-
 
     const changeConfiguration = (key: string, value: number | boolean) => {
         if (config) {
@@ -49,7 +47,6 @@ const OptionsConfig = () => {
         setPass(randomPass);
     }
 
-    //Inicio pass
     function getRandomPass({ long, letters, capitalLetters, numbers, symbols }: { long: number, letters: boolean, capitalLetters: boolean, numbers: boolean, symbols: boolean }): string {
         let randomPass: string = "";
         let validContidions: string[] = [];
@@ -72,34 +69,33 @@ const OptionsConfig = () => {
         let posr = Math.floor(Math.random() * arrayCharacters.length);
         return arrayCharacters[posr];
     }
-    //fin pass
 
 
     return (
-        <div>
-
-
-            <p>{config?.long}</p>
-
-            <Slider defaultValue={16} min={3} max={16} step={1} onChange={(value: number) => (changeConfiguration("long", value))}>
-                <SliderTrack>
-                    <SliderFilledTrack bg='tomato' />
-                </SliderTrack>
-                <SliderThumb />
-            </Slider>
+        <div className="text-options">
+            
+            <div className="slider-container">
+                <p>Size: {config?.long}</p>
+                <Slider colorScheme='teal' defaultValue={16} min={3} max={16} step={1} onChange={(value: number) => (changeConfiguration("long", value))}>
+                    <SliderTrack>
+                        <SliderFilledTrack className="slider-option" />
+                    </SliderTrack>
+                    <SliderThumb boxSize={6}/>
+                </Slider>
+            </div>
 
             <Stack spacing={5} direction='column'>
-                <Checkbox colorScheme='red' defaultChecked onChange={(event: ChangeEvent<HTMLInputElement>) => (console.log(changeConfiguration("letters", event.target.checked)))}>
-                    Include lowercase letters
+                <Checkbox colorScheme='teal' defaultChecked onChange={(event: ChangeEvent<HTMLInputElement>) => (console.log(changeConfiguration("letters", event.target.checked)))}>
+                <p>Include lowercase letters</p> 
                 </Checkbox>
-                <Checkbox colorScheme='red' defaultChecked onChange={(event: ChangeEvent<HTMLInputElement>) => (console.log(changeConfiguration("capitalLetters", event.target.checked)))}>
-                    Include uppercase letters
+                <Checkbox colorScheme='teal' defaultChecked onChange={(event: ChangeEvent<HTMLInputElement>) => (console.log(changeConfiguration("capitalLetters", event.target.checked)))}>
+                <p>Include uppercase letters</p> 
                 </Checkbox>
-                <Checkbox colorScheme='red' defaultChecked onChange={(event: ChangeEvent<HTMLInputElement>) => (console.log(changeConfiguration("numbers", event.target.checked)))}>
-                    Include numbers
+                <Checkbox colorScheme='teal' defaultChecked onChange={(event: ChangeEvent<HTMLInputElement>) => (console.log(changeConfiguration("numbers", event.target.checked)))}>
+                    <p>Include numbers</p> 
                 </Checkbox>
-                <Checkbox colorScheme='red' defaultChecked onChange={(event: ChangeEvent<HTMLInputElement>) => (console.log(changeConfiguration("symbols", event.target.checked)))}>
-                    Include symbols
+                <Checkbox colorScheme='teal' defaultChecked onChange={(event: ChangeEvent<HTMLInputElement>) => (console.log(changeConfiguration("symbols", event.target.checked)))}>
+                <p>Include symbols</p> 
                 </Checkbox>
             </Stack>
 

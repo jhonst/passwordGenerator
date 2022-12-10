@@ -5,10 +5,6 @@ import { useState } from "react";
 
 const PassView = () => {
 
-    //use context
-    //const { pass, setPass } : PassInter = useContext( ContextPassword );
-
-    //
     const [ copyStatus, setCopyStatus ] = useState("Copy");
     const { pass } = usePassContext();
 
@@ -20,16 +16,10 @@ const PassView = () => {
         }, 1000);
     }
 
-
-
     return (
         <div className="container-pass-view">
             <InputGroup size='lg'>
                 <Input
-                    //pr='4.5rem'
-                    //colorScheme='lime'
-                    //borderColor='lime'
-                    //focusBorderColor='lime'
                     type='text'
                     placeholder='P4$w0Rd'
                     _placeholder={{ opacity: 0.5, color: 'white' }}
@@ -38,6 +28,7 @@ const PassView = () => {
                 />
                 <InputRightElement width='4.5rem'>
                     <Button 
+                        disabled={pass === "" ? true : false}
                         h='1.75rem'
                         size='sm'
                         colorScheme={copyStatus === "Copy" ? 'gray' : 'teal'}
@@ -47,7 +38,6 @@ const PassView = () => {
                 </InputRightElement>
             </InputGroup>
         </div>
-
     );
 }
 
