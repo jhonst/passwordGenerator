@@ -1,0 +1,35 @@
+/*body { min-height: 100vh; }*/
+
+body{
+  background-color: #463F3A !important;
+
+  /*
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  */
+}
+
+.app-general{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  height: 100vh;
+}
+
+.app-general-body{
+  width: 100%;
+}
+
+.app-general > *{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/*Global styles*/
+.color-white{
+  color: white;
+}
