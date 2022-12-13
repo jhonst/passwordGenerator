@@ -4,8 +4,15 @@
     background-color: #036D19;
     padding: 25px;
     border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .container-pass-view Input{
     color: white;
+}
+
+@media screen and (max-width: 600px) {
+    .container-pass-view {
+        width: 85%;
+    }
 }

@@ -21,3 +21,9 @@
     color: white;
     font-family: 'Rajdhani', sans-serif !important;
 }
+
+@media screen and (max-width: 600px) {
+    .slider-container{
+        flex-direction: column;
+    }    
+}
